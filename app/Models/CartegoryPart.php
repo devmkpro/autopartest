@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class CartegoryPart extends Model
 {
-    protected $table = 'cartegory_parts';
+    protected $table = 'category_part';
 
     protected $fillable = [
-        'category_id',
-        'part_id',
+        'category_uuid',
+        'part_uuid',
     ];
 
     /**

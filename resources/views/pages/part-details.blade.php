@@ -12,6 +12,7 @@
                   <p class="part-description">{{ $part['description'] }}</p>
                   <p class="part-price">${{ number_format($part['price'], 2) }}</p>
                   <p class="part-stock">Código da peça: {{ $part['part_number'] }}</p>
+                  <p class="part-categories">Categorias: {{ implode(', ', $part->categories->pluck('name')->toArray()) }}</p>
                   <a href="{{ redirect()->back()->getTargetUrl() }}" class="button">Voltar para o catálogo</a>
               </div>
           </div>

@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cartegory_parts', function (Blueprint $table) {
+        Schema::create('category_part', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('part_id');
+            $table->uuid('category_uuid');
+            $table->uuid('part_uuid');
             $table->timestamps();
 
-            $table->foreign('category_id')->references('uuid')->on('categories')->onDelete('cascade');
-            $table->foreign('part_id')->references('uuid')->on('parts')->onDelete('cascade');
+            $table->foreign('category_uuid')->references('uuid')->on('categories')->onDelete('cascade');
+            $table->foreign('part_uuid')->references('uuid')->on('parts')->onDelete('cascade');
         });
     }
 
