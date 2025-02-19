@@ -13,6 +13,6 @@ class PartSeeder extends Seeder
      */
     public function run(): void
     {
-        Part::factory(100)->create();
+        Part::factory(53600)->create();
     }
 }
